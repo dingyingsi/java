@@ -1,0 +1,25 @@
+ext {
+    nexus = System.getProperty('nexus.url')
+}
+
+gradle.settingsEvaluated {
+    settings ->
+        settings.pluginManagement {
+            resolutionStrategy {
+            }
+            repositories {
+                mavenLocal()
+                maven {
+                    url  "${nexus}/repository/maven-public/"
+                    credentials {
+                        username 'admin'
+                        password 'Dingyingsi1988!'
+                    }
+                    allowInsecureProtocol true
+                    // println "settingsEvaluated repository url: " + url
+                }
+            }
+        }
+}
+
+rootProject.name = 'java'
