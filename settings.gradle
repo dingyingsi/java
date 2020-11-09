@@ -24,4 +24,4 @@ gradle.settingsEvaluated {
 
 rootProject.name = 'java'
 include 'configuration-download-plugin'
-
+include 'scala'
