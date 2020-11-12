@@ -7,12 +7,12 @@ package com.dys.java8.function;
 public class Calculator3 {
  
     public static void main(String args[]) {
-        Calculator.Three three = new Calculator().new Three();
+        Calculator3.Three three = new Calculator3().new Three();
         three.print();
     }
- 
+
     class Three implements One, Two {
- 
+
         @Override
         public void print() {
             System.out.println("Three");
@@ -20,16 +20,18 @@ public class Calculator3 {
             Two.super.print();
         }
     }
- 
+
     interface One {
         default void print() {
             System.out.println("one");
         }
     }
- 
+
     interface Two {
         default void print() {
             System.out.println("two");
         }
     }
 }
+
+

@@ -13,7 +13,7 @@ public class Demo01 {
                 new User(30, "Cate"),
                 new User(30, "Cate")
         );
-        Map<String, List<User>> collect = users.parallelStream().collect(Collectors.groupingBy(user -> user.age + user.name, Collectors.toList()));
+        Map<String, List<User>> collect = users.parallelStream().collect(Collectors.groupingBy(user -> user.getAge() + user.getName(), Collectors.toList()));
         System.out.println(collect);
     }
 

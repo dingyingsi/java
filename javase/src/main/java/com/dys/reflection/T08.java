@@ -6,10 +6,11 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.reflect.Method;
+import java.net.URL;
 import java.net.URLClassLoader;
 
 public class T08 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         String str = "public class Hi {public static void main(String[] args){System.out.println(\"HaHa,sxt!\");}}";
         JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
         int result = compiler.run(null, null, null, "c:/myjava/HelloWorld.java");

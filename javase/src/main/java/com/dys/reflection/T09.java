@@ -8,7 +8,7 @@ import java.net.URL;
 import java.util.List;
 
 public class T09 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         //获得脚本引擎对象
         ScriptEngineManager sem = new ScriptEngineManager();
         ScriptEngine engine = sem.getEngineByName("javascript");
@@ -36,7 +36,7 @@ public class T09 {
             System.out.println(temp);
         }
 //执行一个js文件(我们将a.js至于项目的src下即可)
-        URL url = Demo01.class.getClassLoader().getResource("a.js");
+        URL url = T09.class.getClassLoader().getResource("a.js");
         FileReader fr = new FileReader(url.getPath());
         engine.eval(fr);
         fr.close();   //由于只是测试，就不那么规范了。大家实际用时要使用try catch finally！

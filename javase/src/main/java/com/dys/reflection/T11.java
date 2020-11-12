@@ -1,5 +1,7 @@
 package com.dys.reflection;
 
+import javassist.*;
+
 import java.lang.reflect.Method;
 import java.util.Arrays;
 
@@ -66,10 +68,7 @@ public class T11 {
     public static void test06() throws Exception{
         CtClass cc = ClassPool.getDefault().get("com.bjsxt.test.Emp");
         Object[] all = cc.getAnnotations();
-        Author a = (Author)all[0];
-        String name = a.name();
-        int year = a.year();
-        System.out.println("name: " + name + ", year: " + year);
+
     }
     public static void main(String[] args) throws Exception {
         test06();

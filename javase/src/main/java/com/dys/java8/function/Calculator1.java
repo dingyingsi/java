@@ -16,7 +16,7 @@ public class Calculator1 {
     }
  
     public static void  main(String...args) {
-        Consumer<String> print = Calculator::print;
+        Consumer<String> print = Calculator1::print;
         print.accept("message");
  
     }

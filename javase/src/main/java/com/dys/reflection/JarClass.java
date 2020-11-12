@@ -1,6 +1,8 @@
 package com.dys.reflection;
 
 import java.io.File;
+import java.net.JarURLConnection;
+import java.net.URL;
 import java.util.*;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
@@ -8,7 +10,6 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 public class JarClass {
-    private static final Logger logger = LogManager.getLogger(JarClass.class);
 
     private static Set<String> getTypeAliasesPackageFromFileAndJar(String typeAliasesPackage) {
         Set<String> packageNames = new HashSet<String>();
@@ -18,7 +19,6 @@ public class JarClass {
             Enumeration<URL> urls = classLoader.getResources(typeAliasesPackagePath);
             while (urls.hasMoreElements()) {
                 URL url = urls.nextElement();
-                logger.debug(url.getPath());
                 if (url != null) {
                     String protocol = url.getProtocol();
                     switch (protocol) {
@@ -50,7 +50,7 @@ public class JarClass {
                     .replace(".class", "");
             String className = classNamePath.replace(File.separator, ".");
             Class<?> clazz = Class.forName(className);
-            if (clazz.isAnnotationPresent(Alias.class)) {
+            if (clazz.isAnnotationPresent(Override.class)) {
                 set.add(classNamePath.substring(0, classNamePath.lastIndexOf(File.separator)).replace(File.separator,
                         "."));
             }
@@ -79,7 +79,7 @@ public class JarClass {
             if (jarEntryName.endsWith(".class")) {
                 String className = jarEntryName.substring(0, jarEntryName.indexOf(".class")).replace("/", ".");
                 Class<?> clazz = Class.forName(className);
-                if (clazz.isAnnotationPresent(Alias.class)) {
+                if (clazz.isAnnotationPresent(Override.class)) {
                     String packageName = className.substring(0, className.lastIndexOf("."));
                     packageNames.add(packageName);
                 }

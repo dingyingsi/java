@@ -12,4 +12,28 @@ public class User {
   }
   public User() {
   }
+
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
+  }
+
+  public int getAge() {
+    return age;
+  }
+
+  public void setAge(int age) {
+    this.age = age;
+  }
+
+  public String getUname() {
+    return uname;
+  }
+
+  public void setUname(String uname) {
+    this.uname = uname;
+  }
 }

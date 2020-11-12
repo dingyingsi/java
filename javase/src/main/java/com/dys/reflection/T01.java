@@ -1,7 +1,7 @@
 package com.dys.reflection;
 
 public class T01 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         String path = "User";
         Class clazz = Class.forName(path);
         System.out.println(clazz.hashCode());

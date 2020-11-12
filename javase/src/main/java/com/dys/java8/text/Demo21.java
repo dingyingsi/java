@@ -1,6 +1,8 @@
 package com.dys.java8.text;
 
 public class Demo21 {
+
+    /*
     public static void main(String[] args) {
 
         String query = "select `username` from user\n" +
@@ -15,7 +17,7 @@ public class Demo21 {
 
         System.out.println(query);
         System.out.println(query1);
-
-
     }
+*/
+
 }

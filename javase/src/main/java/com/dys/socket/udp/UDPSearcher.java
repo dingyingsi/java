@@ -25,3 +25,5 @@ public class UDPSearcher {
         System.out.println("UDPSearcher receive from ip: " + ip + "\tport: " + port + "\tdata" + data);
         System.out.println("UDPSearcher finished");
         ds.close();
+    }
+}

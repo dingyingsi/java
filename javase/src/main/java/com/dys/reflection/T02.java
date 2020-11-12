@@ -5,14 +5,14 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 public class T02 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         String path = "User";
         Class clazz = Class.forName(path);
 
         System.out.println(clazz.getName());
         System.out.println(clazz.getSimpleName());
 
-        Field[] fields = clazz.getFields();
+        // Field[] fields = clazz.getFields();
         Field[] fields = clazz.getDeclaredFields();
         Field f = clazz.getDeclaredField("uname");
         System.out.println(fields.length);
@@ -20,7 +20,7 @@ public class T02 {
             System.out.println("temp = " + temp);
         }
         Method[] methods = clazz.getDeclaredMethods();
-        Method m01 = clazz.getDeclaredMethod("getUname", null);
+        Method m01 = clazz.getDeclaredMethod("getUname", (Class<?>[]) null);
 
         Method m02 = clazz.getDeclaredMethod("setUname", String.class);
         for (Method m : methods) {

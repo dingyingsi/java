@@ -1,11 +1,13 @@
 package com.dys.reflection;
 
+import javassist.*;
+
 public class T10 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         ClassPool pool = ClassPool.getDefault();
         CtClass cc = pool.makeClass("com.bjsxt.bean.Emp");
-//创建属性
+        //创建属性
         CtField f1 = CtField.make("private int empno;", cc);
         CtField f2 = CtField.make("private String ename;", cc);
         cc.addField(f1);
@@ -16,7 +18,7 @@ public class T10 {
         cc.addMethod(m1);
         cc.addMethod(m2);
 //添加构造器
-        CtConstructor constructor = new CtConstructor(new CtClass[]{CtClass.intType,pool.get("java.lang.String")}, cc);
+        CtConstructor constructor = new CtConstructor(new CtClass[]{CtClass.intType, pool.get("java.lang.String")}, cc);
         constructor.setBody("{this.empno=empno; this.ename=ename;}");
         cc.addConstructor(constructor);
         cc.writeFile("c:/myjava"); //将上面构造好的类写入到c:/myjava中

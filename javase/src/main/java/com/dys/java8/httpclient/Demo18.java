@@ -24,14 +24,14 @@ public class Demo18 {
     }
 
     private static void post() throws Exception {
-        String uriS = "https://newtestsso.xlgxapp.com/sso-oauth2/login";
+        String uriS = "www.baidu.com";
         URI uri = URI.create(uriS);
 
         var httpRequest = HttpRequest.newBuilder(uri)
                 .version(HttpClient.Version.HTTP_1_1)
                 .header("Authorization", "Basic dWlwLWF1dGgtY2xpZW50LWlkOnVpcC1hdXRoLWNsaWVudC1zZWNyZXQ=")
                 .header("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8")
-                .POST(HttpRequest.BodyPublishers.ofString("username=admin&password=Xl123456"))
+                .POST(HttpRequest.BodyPublishers.ofString("username=dingyingsi&password=dys123"))
                 .timeout(Duration.ofMillis(1000))
                 .build();
 
