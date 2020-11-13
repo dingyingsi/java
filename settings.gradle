@@ -27,4 +27,6 @@ include 'configuration-download-plugin'
 include 'scala'
 include 'javase'
 include 'javaee'
+include 'groovy'
+
 
