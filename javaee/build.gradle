@@ -18,4 +18,12 @@ dependencies {
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.11.3'
     implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.22'
 
+
+
+}
+
+gretty {
+    httpPort = 8081
+    contextPath = '/'
+    scanInterval = 0
 }

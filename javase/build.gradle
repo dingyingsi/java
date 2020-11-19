@@ -20,4 +20,7 @@ dependencies {
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.8'
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.9.8'
 
+    implementation group: 'io.netty', name: 'netty-all', version: '4.1.54.Final'
+
+
 }

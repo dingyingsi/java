@@ -59,11 +59,6 @@ project.subprojects {
         }
     }
 
-    dependencies {
-        implementation group: 'com.google.inject', name: 'guice', version: '4.2.3'
-
-    }
-
     repositories {
         mavenLocal()
 
