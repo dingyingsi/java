@@ -9,6 +9,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/configuration-download-plugin" />
+            <option value="$PROJECT_DIR$/javaee" />
+            <option value="$PROJECT_DIR$/javase" />
           </set>
         </option>
       </GradleProjectSettings>
