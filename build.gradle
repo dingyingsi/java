@@ -45,8 +45,8 @@ project.subprojects {
     apply plugin: 'scala'
     apply plugin: 'java-library'
 
-    sourceCompatibility = JavaVersion.VERSION_14
-    targetCompatibility = JavaVersion.VERSION_14
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 
     group = 'com.dys'
     version = '0.0.1-SNAPSHOT'
